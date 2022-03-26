@@ -10,8 +10,12 @@ class App(tk.Tk):
         model = Model()
 
         view = View(self)
+        view.grid(row=0, column=0, padx=10, pady=10)
         
         controller = Controller(model, view)
         
         view.set_controller(controller)
 
+if __name__ == '__main__':
+    app = App()
+    app.mainloop()
