@@ -1,3 +1,5 @@
+import re
+
 def is_valid_ip(self,ip_cidr):
     regex = re.match(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$", ip_cidr)
     return bool(regex) and all(map(lambda n: 0<=int(n)<=255, regex.groups()))
