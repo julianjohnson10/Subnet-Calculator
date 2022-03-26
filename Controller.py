@@ -1,9 +1,12 @@
+import View, Model
 class Controller():
-    def __init__(self, model, view):
-        self.model = model
-        self.view = view
+    def __init__(self, parent):
+        self.parent = parent
+        self.model = Model(self)
+        self.view = View(self)
     
-    def save(self, value):
+    #events
+    def okButton(self, value):
         try:
             self.model.ip_addr = value
             self.model.save()

@@ -1,21 +1,12 @@
-import Model, View, Controller
-import tkinter as tk
+import Controller
+from tkinter import *
 
-class App(tk.Tk):
-    def __init__(self):
-        super().__init__()
-
-        self.title('Subnet Calculator Tool')
-
-        model = Model()
-
-        view = View(self)
-        view.grid(row=0, column=0, padx=10, pady=10)
-        
-        controller = Controller(model, view)
-        
-        view.set_controller(controller)
+def main():
+    root = Tk()
+    frame = Frame(root)
+    root.title = "Subnet Tool"
+    app = Controller(root)
+    root.mainloop()
 
 if __name__ == '__main__':
-    app = App()
-    app.mainloop()
+    main()
