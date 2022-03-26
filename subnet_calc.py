@@ -14,3 +14,4 @@ class App(tk.Tk):
         controller = Controller(model, view)
         
         view.set_controller(controller)
+
