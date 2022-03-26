@@ -12,4 +12,7 @@ class Controller():
         self.root.title("Subnet Tool")
         self.root.deiconify()
         self.root.mainloop()
-        
+
+if __name__ == '__main__':
+    c = Controller()
+    c.run()
