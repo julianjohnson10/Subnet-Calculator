@@ -3,16 +3,11 @@ import View
 import tkinter as Tk
 
 class Controller():
-    def __init__(self) -> None:
-        self.root = Tk.Tk()
-        self.model = Model()
-        self.view = View(self.root)
-
-    def run(self):
-        self.root.title("Subnet Tool")
-        self.root.deiconify()
-        self.root.mainloop()
-
-if __name__ == '__main__':
-    c = Controller()
-    c.run()
+    def __init__(self, model, view):
+        self.model = model
+        self.view = view
+    
+    def save(self, *args):
+        try:
+            self.model.
+            self.model.save()
