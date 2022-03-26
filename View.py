@@ -1,6 +1,4 @@
-import Controller
 import tkinter as Tk
-
 class View(Tk.Frame):
     def __init__(self, parent):
         super().__init__(parent)
